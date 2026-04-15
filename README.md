@@ -1,44 +1,43 @@
 🎓 Placement Management System (C++)
 
-📌 Overview
-This project is a Placement Management System developed in C++.
-It simulates the real-world campus placement process by managing students and companies, ranking students based on CGPA, and allocating jobs based on eligibility and company vacancies.
+📌 Description
+This is a console-based Placement Management System built using C++.
+It simulates the campus placement process by managing students and companies, ranking students based on CGPA, and allocating jobs based on eligibility and vacancies.
 
-🚀 Features
+🧠 Concepts Used
+💻 Object-Oriented Programming (OOP)
+🧬 Inheritance (Student inherits from Person)
+🔁 Polymorphism (display() function)
+📦 STL (vector, queue)
+⚠️ Exception Handling (try-catch)
+🔄 Operator Overloading
+📊 Sorting (Bubble Sort)
+
+⚙️ Features
 Add student details (ID, Name, CGPA)
 Add company details (Name, Minimum CGPA, Vacancies)
 Display students and companies
-Rank students based on CGPA (Bubble Sort)
-Job allocation using Queue (FIFO) mechanism
-Salary assignment based on CGPA
-Exception handling for invalid inputs
+Rank students based on CGPA
+Allocate jobs using Queue (FIFO)
+Assign salary based on CGPA
+Prevent multiple placements for a student
 
-🧠 Concepts Used
-Object-Oriented Programming (OOP)
-Inheritance (Student inherits from Person)
-Polymorphism (display() function)
-STL (Standard Template Library)
-vector for storing data
-queue for job allocation
-Operator Overloading
-Exception Handling (try-catch)
-Sorting Algorithms (Bubble Sort)
-
-⚙️ How It Works
-User adds students and companies
-Students are ranked based on CGPA
-All students are inserted into a queue
+🖥️ How It Works
+User enters student and company details
+Students are sorted based on CGPA
+All students are pushed into a queue
 Each company processes students one by one
-If eligibility criteria is satisfied:
-Student is selected
-Salary is assigned
-Vacancy count is updated
-Each student is placed only once
-
-❗ Error Handling
-Invalid CGPA (<0 or >10)
-Invalid number of vacancies
-Handled using try-catch to prevent program crash
-
-🎯 Conclusion
-This project demonstrates how core C++ concepts can be applied to simulate a real-world system like campus placements in a simple and efficient way.
+If:
+  CGPA ≥ required CGPA
+  Vacancy available
+  Student not already placed
+Then:
+  Student is selected
+  Salary is assigned
+  Placement status is updated
+  
+💡 Salary Logic
+CGPA ≥ 9 → 20 LPA
+CGPA ≥ 8 → 12 LPA
+CGPA ≥ 7 → 8 LPA
+Else → 5 LPA
