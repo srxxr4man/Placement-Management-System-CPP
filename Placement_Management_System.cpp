@@ -190,6 +190,7 @@ public:
 
         cout << "\n--- Job Allocation (Queue Based) ---\n";
 
+        // Job Recruitment using Queue
         queue<Student*> q;
 
         for (auto &s : students) {
